@@ -1,5 +1,7 @@
 # ClassChanger
-A package to toggle classes in vanilla js (not j-query)
+A package(atleast the code) to toggle classes in vanilla js.
+
+> I mostly use toggle classes while making a switch theme method, button interaction etc.
 
 # How to use:
 - You can clone the project or just download the ToggleClass.js. (Will release a npm package later)
@@ -37,4 +39,5 @@ Remember to use this syntax in your main script not in ToggleClass.js
 - This repository is licensed under MIT.
 
 # Contact us:
-You can join our official discord server [The Atelier](https://discord.gg/6Mcy5NpSpH)
+- You can join our official discord server [The Atelier](https://discord.gg/6Mcy5NpSpH)
+- You can support us on [The Atelier team patreon](https://www.patreon.com/the_Atelier)
