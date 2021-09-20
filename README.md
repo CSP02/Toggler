@@ -12,11 +12,29 @@ for example:
 # Syntax:
 > toggleClass('elementID', 'fromClass', 'toClass')
 
+<b> elementID: </b>
+
+ID of the element to which you want to change the class.
+
+<b> fromClass: </b>
+
+element's current class name.
+
+<b> toClass: </b>
+
+New class name you want to change of the given element.
+
+<b> Note: Remember all the arguments are strings.</b>
+
 Remember to use this syntax in your main script not in ToggleClass.js
+
 <b> Note: Don't try to manipulate the ToggleClass.js unless you know javascript.<b>
 
 # Contribution:
 - You can contribute to this repo by creating a pull request for features and issue for bug reports
+
+# license:
+- This repository is licensed under MIT.
 
 # Contact us:
 You can join our official discord server [The Atelier](https://discord.gg/6Mcy5NpSpH)
