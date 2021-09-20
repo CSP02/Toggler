@@ -22,7 +22,7 @@ element's current class name.
 
 <b> toClass: </b>
 
-New class name you want to change of the given element.
+New class name to the given element.
 
 <b> Note: Remember all the arguments are strings.</b>
 
