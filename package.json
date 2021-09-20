@@ -1,10 +1,10 @@
 {
   "name": "cspclasstoggler",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A package to toggle classes in vanila js",
   "main": "ToggleClass.js",
-  "dependencies":{
-    "js" : "^0.1.0"
+  "dependencies": {
+    "js": "^0.1.0"
   },
   "scripts": {
     "test": "toggleClass('testId', 'fromClass', 'toClass')"
