@@ -47,7 +47,7 @@ $ git clone url
 
 for example:
 ```html
-<script src = "ToggleClass.js"></script>
+<script src = "Toggler.js"></script>
 <script src = "myscript.js"></script>
 ```
 - After this you can use `toggleClass(elementId, fromClass, toClass)` method to toggle between classes `toggleImage(elementID, fromImage, toImage)` to toggle between images in your main script.
@@ -58,7 +58,7 @@ for example:
 **In HTML file**:
 ```html
 <head>
-    <script src = "ToggleClass.js"></script>
+    <script src = "Toggler.js"></script>
     <script src = "myscript.js"></script>
 </head>
 ```
@@ -87,7 +87,7 @@ Remember to use this syntax in your main script not in ToggleClass.js
 
 **Note: Don't try to manipulate the ToggleClass.js unless you know javascript.**
 
-**For more info about the 'Toggler' visit [Toggler](https://the-atelier.ml/Pages/Toggler/toggler.html)
+**For more info about the 'Toggler' visit [Toggler Docs.](https://the-atelier.ml/Pages/Toggler/toggler.html)
 # Contribution:
 - You can contribute to this repo by creating a pull request for features and issue for bug reports
 
