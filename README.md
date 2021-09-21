@@ -38,7 +38,7 @@ $ git clone url
 **Or else:**
 - Just copy paste the code.
 
-**Note: While using Toggler.js please make sure you have a backup because if something goes wrong and you pushed the then things will become tedious to handle.**
+**Note: While using Toggler.js please make sure you have a backup because if something goes wrong and you pushed the changes then things will become tedious to handle.**
 
 # How to use:
 
