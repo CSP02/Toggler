@@ -6,15 +6,19 @@ A package(atleast the code) to toggle properties of tags.
 # New feature:
 
 **Toggle images too:**
-    - Now toggle images with ease.
-    **Syntax**
-    ```js 
+
+- Now toggle images with ease.
+
+**Syntax**
+
+```js 
     Count();
     toggleImage('elementID', 'fromImage', 'toImage');
-    ```
+```
     **Note: To make it work you ** ***must*** ** use `Count()` method. Notice that in `Count() method 'C' is capital** 
 
 # How to use:
+
 - You can clone the project or just download the ToggleClass.js. (Will release a npm package later)
 - include this script before including your main script.
 for example:
