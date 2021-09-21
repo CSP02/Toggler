@@ -7,9 +7,10 @@ A package(atleast the code) to toggle properties of tags.
 
 **Toggle images too:**
 
-- Now toggle images with ease.
+- Now toggle images with an ease.
 
-**Syntax**
+**Syntax:(only for image toggling general syntax is given below)**
+
 ```js 
 Count();
 toggleImage('elementID', 'fromImage', 'toImage');
