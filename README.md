@@ -22,6 +22,7 @@ toggleImage('elementID', 'fromImage', 'toImage');
 **Downloading:**
 
 - Click on the code dropdown and click 'Download zip' to download.
+
 **Cloning using cmd(only for contribution purpose)**
 
 - To clone the repo click on the code dropdown and there you can copy the link.
