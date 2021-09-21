@@ -9,14 +9,14 @@ A package(atleast the code) to toggle properties of tags.
 
 - Now toggle images with an ease.
 
-**Syntax:(only for image toggling general syntax is given below)**
+**Syntax:**
 
 ```js 
-Count();
+InteractionCount();
 toggleImage('elementID', 'fromImage', 'toImage');
 ```
 
-**Note: To make it work you** ***must*** **use `Count()` method. Notice that in `Count()` method 'C' is capital** 
+**Note: To make it work you** ***must*** **use `InteractionCount()` method. Notice that in `InteractionCount()` method 'I' and 'C' are capital** 
 # How to download:
 
 **Downloading:**
@@ -52,7 +52,7 @@ for example:
 ```
 - After this you can use `toggleClass(elementId, fromClass, toClass)` method to toggle between classes `toggleImage(elementID, fromImage, toImage)` to toggle between images in your main script.
 
-**Note: To make it work you** ***must*** **use `Count()` method. Notice that in `Count()` method 'C' is capital** 
+**Note: To make it work you** ***must*** **use `InteractionCount()` method. Notice that in `InteractionCount()` method 'I' and 'C' are capital** 
 
 # Syntax:
 **In HTML file**:
@@ -65,8 +65,18 @@ for example:
 
 **Your main JavaScript file**:
 ```js
- Count();
+ InteractionCount();
  toggleClass('elementID', 'fromClass', 'toClass')
+```
+
+**Note: InteractionCount method should be above the toggle method if you have multiple toggle methods you can use `InteractionCount()` only once at the beggining of the first toggle method()**
+
+**For example:**
+
+```js
+ InteractionCount();
+ toggleClass('elementID', 'fromClass', 'toClass');
+ toggleImage('elementID', 'fromImage', 'toImage');
 ```
 
 **elementID:**
