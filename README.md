@@ -15,7 +15,7 @@ Count();
 toggleImage('elementID', 'fromImage', 'toImage');
 ```
 
-**Note: To make it work you ** ***must*** ** use `Count()` method. Notice that in `Count() method 'C' is capital** 
+**Note: To make it work you** ***must*** **use `Count()` method. Notice that in `Count() method 'C' is capital** 
 
 # How to use:
 - You can clone the project or just download the ToggleClass.js. (Will release a npm package later)
@@ -27,7 +27,7 @@ for example:
 ```
 - After this you can use `toggleClass(elementId, fromClass, toClass)` method to toggle between classes `toggleImage(elementID, fromImage, toImage)` to toggle between images in your main script.
 
-**Note: To make it work you ** ***must*** ** use `Count()` method. Notice that in `Count() method 'C' is capital** 
+**Note: To make it work you** ***must*** **use `Count()` method. Notice that in `Count() method 'C' is capital** 
 
 # Syntax:
 **In HTML file**:
