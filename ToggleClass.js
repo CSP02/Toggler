@@ -4,7 +4,7 @@ var isEvenCount;
 function toggleClass(elementId, preClass, aftClass) {
     count++;
     isEvenCount = (count % 2 == 0)
-    ToggleClassName('test', 'test', 'toggleTest', isEvenCount)
+    ToggleClassName()
 
     var toggleClass = function ToggleClassName() {
         var el = document.getElementById(`${elementId}`)
