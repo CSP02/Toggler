@@ -1,15 +1,18 @@
-# ClassChanger
-A package(atleast the code) to toggle classes in vanilla js.
+# Toggler
+A package(atleast the code) to toggle properties of tags.
 
 > I mostly use toggle classes while making a switch theme method, button interaction etc.
+
 # New feature:
 
 **Toggle images too:**
     - Now toggle images with ease.
     **Syntax**
-    ```javascript 
-    toggleImage('elementID', 'fromImage', 'toImage')
+    ```js 
+    Count();
+    toggleImage('elementID', 'fromImage', 'toImage');
     ```
+    **Note: To make it work you ** ***must*** ** use `Count()` method. Notice that in `Count() method 'C' is capital** 
 
 # How to use:
 - You can clone the project or just download the ToggleClass.js. (Will release a npm package later)
@@ -19,29 +22,41 @@ for example:
 <script src = "ToggleClass.js"></script>
 <scipt src = "myscript.js"></script>
 ```
-- After this you can use toggleClass(elementId, fromClass, toClass) method to toggle between classes in your main script.
+- After this you can use `toggleClass(elementId, fromClass, toClass)` method to toggle between classes `toggleImage(elementID, fromImage, toImage)` to toggle between images in your main script.
+
+**Note: To make it work you ** ***must*** ** use `Count()` method. Notice that in `Count() method 'C' is capital** 
 
 # Syntax:
-> toggleClass('elementID', 'fromClass', 'toClass')
+**In HTML file**:
+```html
+<head>
+    <script src = "ToggleClass.js"></script>
+    <script src = "myscript.js"></script>
+</head>
+```
+**Your main JavaScript file**:
+```js
+ Count();
+ toggleClass('elementID', 'fromClass', 'toClass')
+```
 
-<b> elementID: </b>
+**elementID:**
 
 ID of the element to which you want to change the class.
 
-<b> fromClass: </b>
+**fromClass:**
 
 element's current class name.
 
-<b> toClass: </b>
+**toClass:**
 
 New class name to the given element.
 
-<b> Note: Remember all the arguments are strings.</b>
+**Note: Remember all the arguments are strings.**
 
 Remember to use this syntax in your main script not in ToggleClass.js
 
-<b> Note: Don't try to manipulate the ToggleClass.js unless you know javascript.<b>
-
+**Note: Don't try to manipulate the ToggleClass.js unless you know javascript.**
 # Contribution:
 - You can contribute to this repo by creating a pull request for features and issue for bug reports
 
