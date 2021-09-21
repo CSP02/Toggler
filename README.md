@@ -2,13 +2,23 @@
 A package(atleast the code) to toggle classes in vanilla js.
 
 > I mostly use toggle classes while making a switch theme method, button interaction etc.
+# New feature:
+
+**Toggle images too:**
+    - Now toggle images with ease.
+    **Syntax**
+    ```javascript 
+    toggleImage('elementID', 'fromImage', 'toImage')
+    ```
 
 # How to use:
 - You can clone the project or just download the ToggleClass.js. (Will release a npm package later)
 - include this script before including your main script.
 for example:
-```<script src = "ToggleClass.js"></script>```
-```<scipt src = "myscript.js"></script>```
+```html
+<script src = "ToggleClass.js"></script>
+<scipt src = "myscript.js"></script>
+```
 - After this you can use toggleClass(elementId, fromClass, toClass) method to toggle between classes in your main script.
 
 # Syntax:
