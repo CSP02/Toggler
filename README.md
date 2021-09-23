@@ -22,6 +22,35 @@ toggler.toggleImage('elementID', 'fromImage', 'toImage');
 
 - Create a new object using `const toggler = new Toggler`.
 
+
+**Toggle slides:**
+- You can now toggle slides(an element).
+
+**Syntax:**
+
+```js 
+const toggler = new Toggler;
+toggler.toggleSlide('elementID', 'direction', speed);
+```
+
+**Direction**:
+
+- Direction says about in what direction the slide to start either horizontal slide or vertical slide.
+(visit docs for more info link is below.)
+
+**Speed:**
+
+- Speed defines the speed of the toggling that mean how fast it to slide.
+
+**Example:**
+
+```js
+const toggler = new Toggler;
+toggler.toggleSlide('testElement', 'horizontal', 60);//toggles the slide horizontally i.e from left to right ot right to left
+```
+
+- vertical slide is still in dev.
+
 # Optimizations:
 - Now Toggler is a class.
 - Removed `InteractionCount()` which sometimes doesn't work properly.
@@ -83,6 +112,7 @@ for example:
  const toggler = new Toggler;
  toggler.toggleClass('elementID', 'fromClass', 'toClass');
  toggler.toggleImage('elementID', 'fromImage', 'toImage');
+ toggler.toggleSlide('elementID', 'direction', speed)
 ```
 
 **elementID:**
@@ -97,7 +127,18 @@ element's current class name.
 
 New class name to the given element.
 
-**Note: Remember all the arguments are strings.**
+**Direction**:
+
+- Direction says about in what direction the slide to start either horizontal slide or vertical slide.
+(visit docs for more info link is below.)
+
+**Speed:**
+
+- Speed defines the speed of the toggling that mean how fast it to slide.
+
+- Note that speed is int literal.
+
+**Note: Remember all the arguments are strings except speed.**
 
 Remember to use this syntax in your main script not in ToggleClass.js
 
