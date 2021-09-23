@@ -1,28 +1,21 @@
-var isEvenCount
-var count = 1
-
-function InteractionCount() {
-    count++
-    isEvenCount = (count % 2 == 0)
-}
-
-function toggleClass(elementId, preClass, aftClass) {
-    var el = document.getElementById(`${elementId}`)
-    if (isEvenCount) {
-        el.className = el.className.replace(`${preClass}`, `${aftClass}`);
+class Toggler {
+    toggleClass(elementId, preClass, aftClass) {
+        var el = document.getElementById(`${elementId}`)
+        if (el.className == `${preClass}`) {
+            el.className = `${aftClass}`;
+        }
+        else if (el.className == `${aftClass}`) {
+            el.className = `${preClass}`;
+        }
     }
-    else {
-        el.className = el.className.replace(`${aftClass}`, `${preClass}`);
-    }
-}
-
-function toggleImage(elementId, fromImg, toImg) {
-    var el = document.getElementById(`${elementId}`)
-    if (isEvenCount) {
-        el.src = `${toImg}`
-        console.log(`image source set to ${toImg}`)
-    } else {
-        el.src = `${fromImg}`
-        console.log(`image source set to ${fromImg}`)
+    toggleImage(elementId, fromImg, toImg) {
+        var el = document.getElementById(`${elementId}`)
+        if (el.src == `${fromImg}`) {
+            el.src = `${toImg}`
+            console.log(`image source set to ${toImg}`)
+        } else if (el.src == `${toImg}`) {
+            el.src = `${fromImg}`
+            console.log(`image source set to ${fromImg}`)
+        }
     }
 }

@@ -11,15 +11,21 @@ A package(atleast the code) to toggle properties of tags.
 **Toggle images too:**
 
 - Now toggle images with an ease.
+- No more InteractionCount().
 
 **Syntax:**
 
 ```js 
-InteractionCount();
-toggleImage('elementID', 'fromImage', 'toImage');
+const toggler = new Toggler;
+toggler.toggleImage('elementID', 'fromImage', 'toImage');
 ```
 
-**Note: To make it work you** ***must*** **use `InteractionCount()` method. Notice that in `InteractionCount()` method 'I' and 'C' are capital** 
+- Create a new object using `const toggler = new Toggler`.
+
+# Optimizations:
+- Now Toggler is a class.
+- Removed `InteractionCount()` which sometimes doesn't work properly.
+
 # How to download:
 
 **Downloading:**
@@ -53,9 +59,7 @@ for example:
 <script src = "Toggler.js"></script>
 <script src = "myscript.js"></script>
 ```
-- After this you can use `toggleClass(elementId, fromClass, toClass)` method to toggle between classes `toggleImage(elementID, fromImage, toImage)` to toggle between images in your main script.
-
-**Note: To make it work you** ***must*** **use `InteractionCount()` method. Notice that in `InteractionCount()` method 'I' and 'C' are capital** 
+- After this you can use `toggler.toggleClass(elementId, fromClass, toClass)` method to toggle between classes `toggler.toggleImage(elementID, fromImage, toImage)` to toggle between images in your main script. 
 
 # Syntax:
 **In HTML file**:
@@ -69,18 +73,16 @@ for example:
 
 **Your main JavaScript file**:
 ```js
- InteractionCount();
- toggleClass('elementID', 'fromClass', 'toClass')
+ const toggler = new Toggler;
+ toggler.toggleClass('elementID', 'fromClass', 'toClass');
 ```
-
-**Note: InteractionCount method should be above the toggle method if you have multiple toggle methods you can use `InteractionCount()` only once at the beggining of the first toggle method()**
 
 **For example:**
 
 ```js
- InteractionCount();
- toggleClass('elementID', 'fromClass', 'toClass');
- toggleImage('elementID', 'fromImage', 'toImage');
+ const toggler = new Toggler;
+ toggler.toggleClass('elementID', 'fromClass', 'toClass');
+ toggler.toggleImage('elementID', 'fromImage', 'toImage');
 ```
 
 **elementID:**
