@@ -62,7 +62,7 @@ for example:
     <script src = "myscript.js"></script>
 </head>
 ```
-- You can use these in <body></body> too.
+- You can use these in `<body></body>` too.
 
 **Your main JavaScript file**:
 ```js
