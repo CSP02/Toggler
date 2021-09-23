@@ -1,0 +1,22 @@
+{
+  "name": "csptoggler",
+  "version": "0.0.1",
+  "description": "A package(atleast the code) to toggle properties of tags.",
+  "main": "Toggler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chandra-sekhar-pilla/ClassChanger.git"
+  },
+  "keywords": [
+    "toggler"
+  ],
+  "author": "chandrasekharpilla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chandra-sekhar-pilla/ClassChanger/issues"
+  },
+  "homepage": "https://github.com/Chandra-sekhar-pilla/ClassChanger#readme"
+}
