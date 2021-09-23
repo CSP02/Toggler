@@ -1,6 +1,6 @@
 # Toggler
 
-![picture alt](https://replit.com/@Chandupilla02/The-Atelier#images/toggler(small).png "Toggler")
+![Toggler]( "Toggler")
 A package(atleast the code) to toggle properties of tags.
 
 > I mostly use toggle classes while making a switch theme method, button interaction etc.
