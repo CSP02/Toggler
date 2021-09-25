@@ -42,7 +42,7 @@ toggler.toggleSlide('elementID', 'direction', speed);
 
 **Speed:**
 
-- Speed defines the speed of the toggling that mean how fast it to slide.
+- Speed defines the speed of the toggling that mean how fast it should slide.
 
 **Example:**
 
