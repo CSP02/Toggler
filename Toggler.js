@@ -27,13 +27,18 @@ class Toggler {
         var elHeight = el.offsetHeight
         var offsetLeft = el.offsetLeft
         var addPos = offsetLeft
+        var offsetTop = el.offsetTop
+        var addPosTop = offsetTop
         if (direction == 'horizontal') {
             if (offsetLeft > -elWidth)
                 var toggle = setInterval(fadeHorizontal, speed)
             else if (offsetLeft <= -elWidth)
                 var toggle = setInterval(fadeOutHorizontal, speed)
         } else if (direction == 'vertical') {
-            //still in dev
+            if (offsetTop > -elHeight)
+                var toggle = setInterval(fadeVertical, duration)
+            else if (offsetTop <= -elHeight)
+                var toggle = setInterval(fadeOutVertical, duration)
         }
         function fadeHorizontal() {
             if (offsetLeft <= -elWidth)
@@ -50,6 +55,22 @@ class Toggler {
             else {
                 offsetLeft += 10;
                 el.style.left = offsetLeft + 'px';
+            }
+        }
+        function fadeVertical() {
+            if (offsetTop <= -elHeight)
+                clearInterval(toggle)
+            else {
+                offsetTop -= 10;
+                el.style.top = offsetTop + 'px';
+            }
+        }
+        function fadeOutVertical() {
+            if (offsetTop >= elHeight + addPosTop)
+                clearInterval(toggle)
+            else {
+                offsetTop += 10;
+                el.style.top = offsetTop + 'px';
             }
         }
     }

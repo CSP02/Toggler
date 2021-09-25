@@ -25,6 +25,8 @@ toggler.toggleImage('elementID', 'fromImage', 'toImage');
 
 **Toggle slides:**
 - You can now toggle slides(an element).
+- You can select upto 2 types of slide one is vertical side and horizontal slide.
+- Vertical toggle is coded and can be used.
 
 **Syntax:**
 
@@ -46,15 +48,24 @@ toggler.toggleSlide('elementID', 'direction', speed);
 
 ```js
 const toggler = new Toggler;
-toggler.toggleSlide('testElement', 'horizontal', 60);//toggles the slide horizontally i.e from left to right ot right to left
+toggler.toggleSlide('testElement', 'horizontal', 60);//toggles the slide horizontally i.e from left to right or right to left
+toggler.toggleSlide('testElement2', 'vertical', 60);//toggles the slide horizontally i.e from bottom to top or top to bottom
 ```
 
-- vertical slide is still in dev.
+**Note: To avoid problems use `left:30px` or `top:30px` instead of `margin-left:30px` or `margin-top:30px` because the code calculats the offset values.**
+
+# Future planned improvements:
+
+- Add a `toggleProperty()` to toggle between properties of the elements or tags.
+- Optimise code.
+- Release a CDN.
+- Make the code more stable.
+- Improve toggleSlide() for vertical toggles.
 
 # Optimizations:
 - Now Toggler is a class.
 - Removed `InteractionCount()` which sometimes doesn't work properly.
-
+- Added vertical slide support.
 # How to download:
 
 **Downloading:**
@@ -144,7 +155,7 @@ Remember to use this syntax in your main script not in ToggleClass.js
 
 **Note: Don't try to manipulate the ToggleClass.js unless you know javascript.**
 
-**For more info about the 'Toggler' visit [Toggler Docs.](https://the-atelier.ml/Pages/Toggler/toggler.html)
+**For more info about the 'Toggler' visit [Toggler Docs.](https://the-atelier.ml/Pages/Toggler/toggler.html)**
 # Contribution:
 - You can contribute to this repo by creating a pull request for features and issue for bug reports
 
