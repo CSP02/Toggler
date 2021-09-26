@@ -49,7 +49,7 @@ toggler.toggleSlide('elementID', 'direction', speed);
 ```js
 const toggler = new Toggler;
 toggler.toggleSlide('testElement', 'horizontal', 60);//toggles the slide horizontally i.e from left to right or right to left
-toggler.toggleSlide('testElement2', 'vertical', 60);//toggles the slide horizontally i.e from bottom to top or top to bottom
+toggler.toggleSlide('testElement2', 'vertical', 60);//toggles the slide vertical i.e from bottom to top or top to bottom
 ```
 
 **Note: To avoid problems use `left:30px` or `top:30px` instead of `margin-left:30px` or `margin-top:30px` because the code calculats the offset values.**
@@ -91,7 +91,7 @@ $ git clone url
 
 # How to use:
 
-- You can clone the project or just download the ToggleClass.js. (Will release a npm package later)
+- You can clone the project or just download the Toggler.js. (Will release a npm package later)
 - include this script before including your main script.
 
 for example:
@@ -151,9 +151,9 @@ New class name to the given element.
 
 **Note: Remember all the arguments are strings except speed.**
 
-Remember to use this syntax in your main script not in ToggleClass.js
+Remember to use this syntax in your main script not in Toggler.js
 
-**Note: Don't try to manipulate the ToggleClass.js unless you know javascript.**
+**Note: Don't try to manipulate the Toggler.js unless you know javascript.**
 
 **For more info about the 'Toggler' visit [Toggler Docs.](https://the-atelier.ml/Pages/Toggler/toggler.html)**
 # Contribution:
