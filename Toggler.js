@@ -74,4 +74,11 @@ class Toggler {
             }
         }
     }
+
+    //togglers the Property of the element with reference to the id of the element
+    toggleProperty(elementIdOrClass, property, fromValue, toValue) {
+        var el = document.getElementById(elementIdOrClass);
+        if (el.style.getPropertyValue(`${property}`) == `${fromValue}`) el.style.setProperty(`${property}`, `${toValue}`)
+        else el.style.setProperty(`${property}`, `${fromValue}`)
+    }
 }
