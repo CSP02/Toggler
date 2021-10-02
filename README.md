@@ -94,7 +94,7 @@ $ git clone url
 
 **Downloading(Through Official website):**
 
-- Go to [Toggler official website](https://the-atleier.ml/Pages/Toggler/toggler.html).
+- Go to [Toggler official website](https://the-atelier.ml/Pages/Toggler/toggler.html).
 - Click on the Download latest Toggler.js and choose path.
 - Download it and use it by copying the file to your project folder.
 
