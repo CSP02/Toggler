@@ -2,17 +2,53 @@
 
 ![Toggler](https://github.com/Chandra-sekhar-pilla/Toggler/blob/main/resouces/toggler%20(small).png "Toggler")
 
-A package(atleast the code) to toggle properties of tags.
+A package (atleast the code) to toggle properties of tags.
 
 > I mostly use toggle classes while making a switch theme method, button interaction etc.
 
-# Toggler.js CDN:
+# How to use 
+## through Toggler.js CDN
 
+Official CDN:
+```html
+<script src="https://the-atelier.ml/external-scripts/Toggler.js"></script>
 ```
-https://the-atelier.ml/external-scripts/Toggler.js
+jsDelivr:
+```html
+<script src="https://cdn.jsdelivr.net/gh/Chandra-sekhar-pilla/Toggler/Toggler.js"></script>
 ```
 
-# New feature:
+You can use this in either body tag or in head tag
+
+In you JavaScript file:
+
+```js
+ const toggler = new Toggler;
+ toggler.toggleClass('elementID', 'fromClass', 'toClass');
+ toggler.toggleImage('elementID', 'fromImage', 'toImage');
+ toggler.toggleSlide('elementID', 'direction', speed);
+ toggler.toggleProperty('elementID', 'propertyName', 'fromValue', 'toValue');
+```
+
+## Manually downloading the file
+
+- You can clone the project or just download the Toggler.js (Will release as a npm package later).
+- Include this script before including your main script.
+
+**or else:**
+
+- Download it from official site.
+- And follow the steps below.
+
+for example:
+
+```html
+<script src="Toggler.js"></script>
+<script src="myscript.js"></script>
+```
+- After this you can use `toggler.toggleClass(elementId, fromClass, toClass)` method to toggle between classes `toggler.toggleImage(elementID, fromImage, toImage)` to toggle between images in your main script.
+
+# New feature
 
 **Toggle Properties:**
 
@@ -60,7 +96,7 @@ toggler.toggleSlide('testElement2', 'vertical', 60);//toggles the slide vertical
 
 **Note: To avoid problems use `left:30px` or `top:30px` instead of `margin-left:30px` or `margin-top:30px` because the code calculats the offset values.**
 
-# Future planned improvements:
+# Planned improvements
 
 - Upgrade Toggler so users can use class names too for toggling.
 - Improve toggleSlide() for vertical toggles.
@@ -74,25 +110,23 @@ toggler.toggleSlide('testElement2', 'vertical', 60);//toggles the slide vertical
 - Removed `InteractionCount()` which sometimes doesn't work properly.
 - Added vertical slide support.
 
-# How to download:
+# How to download
 
-**Downloading(Through github):**
+**Downloading (through github):**
 
 - Click on the code dropdown and click 'Download zip' to download.
 
-**Cloning using cmd(only for contribution purpose)**
+**Cloning using command line (only for contribution purpose)**
 
-- To clone the repo click on the code dropdown and there you can copy the link.
-- Then open cmd in your pc and type
+- Open command line in your PC and type
 
 ```
-$ git clone url
+$ git clone https://github.com/Chandra-sekhar-pilla/Toggler.git
 ```
-- Replace 'url' with the copied link and click enter.
 - Repository will be cloned and you can use Toggler.js in your code.
-- If you want to contribute changes can be pushed(check the code before pushing to origin or push to 'other' branch).
+- If you want to contribute changes can be pushed. (check the code before pushing to origin or push to 'other' branch)
 
-**Downloading(Through Official website):**
+**Downloading (through Official website):**
 
 - Go to [Toggler official website](https://the-atelier.ml/Pages/Toggler/toggler.html).
 - Click on the Download latest Toggler.js and choose path.
@@ -103,62 +137,7 @@ $ git clone url
 
 **Note: While using Toggler.js please make sure you have a backup because if something goes wrong and you pushed the changes then things will become tedious to handle.**
 
-# How to use(through Toggler.js CDN):
-
-**In your html:**
-
-```html
-<script src="https://the-atelier.ml/external-scripts/Toggler.js"></script>
-```
-
-**You can use this in either body tag or in head tag**
-
-**In you js file:**
-
-```js
- const toggler = new Toggler;
- toggler.toggleClass('elementID', 'fromClass', 'toClass');
- toggler.toggleImage('elementID', 'fromImage', 'toImage');
- toggler.toggleSlide('elementID', 'direction', speed);
- toggler.toggleProperty('elementID', 'propertyName', 'fromValue', 'toValue');
-```
-
-# How to use(by downloading Toggler.js):
-
-- You can clone the project or just download the Toggler.js(Will release a npm package later).
-- Include this script before including your main script.
-
-**or else:**
-
-- Download it from official site.
-- And follow the steps below.
-
-for example:
-
-```html
-<script src = "Toggler.js"></script>
-<script src = "myscript.js"></script>
-```
-- After this you can use `toggler.toggleClass(elementId, fromClass, toClass)` method to toggle between classes `toggler.toggleImage(elementID, fromImage, toImage)` to toggle between images in your main script. 
-
-# Syntax:
-**In HTML file**:
-```html
-<head>
-    <script src = "Toggler.js"></script>
-    <script src = "myscript.js"></script>
-</head>
-```
-- You can use these in `<body></body>` too.
-
-**Your main JavaScript file**:
-```js
- const toggler = new Toggler;
- toggler.toggleClass('elementID', 'fromClass', 'toClass');
-```
-
-**For example:**
-
+# Syntax
 ```js
  const toggler = new Toggler;
  toggler.toggleClass('elementID', 'fromClass', 'toClass');
@@ -200,7 +179,7 @@ Remember to use this syntax in your main script not in Toggler.js
 # Contribution:
 - You can contribute to this repo by creating a pull request for features and issue for bug reports
 
-# license:
+# License
 - This repository is licensed under MIT.
 
 # Contact us:
