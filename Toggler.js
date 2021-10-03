@@ -36,9 +36,9 @@ class Toggler {
                 var toggle = setInterval(fadeOutHorizontal, speed)
         } else if (direction == 'vertical') {
             if (offsetTop > -elHeight)
-                var toggle = setInterval(fadeVertical, duration)
+                var toggle = setInterval(fadeVertical, speed)
             else if (offsetTop <= -elHeight)
-                var toggle = setInterval(fadeOutVertical, duration)
+                var toggle = setInterval(fadeOutVertical, speed)
         }
         function fadeHorizontal() {
             if (offsetLeft <= -elWidth)
