@@ -94,13 +94,13 @@ toggler.toggleSlide('testElement', 'horizontal', 60);//toggles the slide horizon
 toggler.toggleSlide('testElement2', 'vertical', 60);//toggles the slide vertical i.e from bottom to top or top to bottom
 ```
 
-**Note: To avoid problems use `left:30px` or `top:30px` instead of `margin-left:30px` or `margin-top:30px` because the code calculats the offset values.**
+**Note: To avoid problems use `left: 30px` or `top: 30px` instead of `margin-left: 30px` or `margin-top: 30px` because the code calculats the offset values.**
 
 # Planned improvements
 
 - Upgrade Toggler so users can use class names too for toggling.
 - Improve toggleSlide() for vertical toggles.
-- Improve togglePrperty() cause only changing when it is clicked second time at the beginning.
+- Improve toggleProperty() cause only changing when it is clicked second time at the beginning.
 
 **Note: You can request some features by opening a PR or issuing a feature request through issue.**
 
@@ -112,9 +112,9 @@ toggler.toggleSlide('testElement2', 'vertical', 60);//toggles the slide vertical
 
 # How to download
 
-**Downloading (through github):**
+**Downloading (through github)**
 
-- Click on the code dropdown and click 'Download zip' to download.
+Go to the [releases page](https://github.com/Chandra-sekhar-pilla/Toggler/releases). And then click "Source code (zip)" in the latest stable release to download. And then you can extract and use Toggler.js.
 
 **Cloning using command line (only for contribution purpose)**
 
