@@ -16,10 +16,21 @@ For latest version
 ```html
 <script src="https://the-atelier.ml/external-scripts/Toggler.js"></script>
 ```
+For Toggler.min.js
+
+```html
+<script src="https://the-atelier.ml/external-scripts/Toggler.min.js"></script>
+```
+
 jsDelivr:
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/Chandra-sekhar-pilla/Toggler/Toggler.js"></script>
+```
+For Toggler.min.js
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/Chandra-sekhar-pilla/Toggler/Toggler.min.js"></script>
 ```
 
 You can use this in either body tag or in head tag
@@ -54,9 +65,9 @@ for example:
 
 # New feature
 
-**Toggle Properties:**
+**Toggle.min.js:**
 
-- Now toggleClass() works for multiple classes.
+- Added Toggler.min.js - A file which saves you some storage and provides all the features of Toggler.js  
 
 **Syntax:**
 
@@ -103,17 +114,19 @@ toggler.toggleSlide('testElement2', 'vertical', 60);//toggles the slide vertical
 # Improvements done
 
 - Improve toggleProperty() cause only changing when it is clicked second time at the beginning.
+- Added Toggler.min.js - minimised version of Toggler.js
+
+# Optimizations:
+
+- toggleClass() works even the element contains multiple classes.
+- Optimised code.
+
 
 # Planned improvements
 
 - Improve toggleSlide() for vertical toggles.
 
 **Note: You can request some features by opening a PR or issuing a feature request through issue.**
-
-# Optimizations:
-
-- toggleClass() works even the element contains multiple classes.
-- Optimised code.
 
 # How to download
 
