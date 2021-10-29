@@ -1,21 +1,30 @@
 class Toggler {
+    //toggleClass() will toggle the provided class name and the current class name. Works for multiple classes too
     toggleClass(elementId, preClass, aftClass) {
-        var el = document.getElementById(`${elementId}`)
-        if (el.className == `${preClass}`) {
-            el.className = `${aftClass}`;
+        var el = document.getElementById(elementId)
+        const isCCGO = el.className.split(" ").length > 1 //isCCGO stands for isClassCountGreaterThanOne
+        if (el.className.includes(preClass) && !isCCGO) {
+            el.className = aftClass;
         }
-        else if (el.className == `${aftClass}`) {
-            el.className = `${preClass}`;
+        else if (el.className.includes(preClass) && isCCGO) {
+            var replaced = el.className.replace(preClass, '')
+            el.className = replaced + aftClass;
+        } else if (el.className.includes(aftClass) && !isCCGO) {
+            el.className = preClass;
+        }
+        else if (el.className.includes(aftClass) && isCCGO) {
+            var replaced = el.className.replace(aftClass, '')
+            el.className = replaced + preClass;
         }
     }
+
+    //toggleImage() is the method which will toggle the src image of the image tag
     toggleImage(elementId, fromImg, toImg) {
         var el = document.getElementById(`${elementId}`)
-        if (el.src == `${fromImg}`) {
-            el.src = `${toImg}`
-            console.log(`image source set to ${toImg}`)
-        } else if (el.src == `${toImg}`) {
-            el.src = `${fromImg}`
-            console.log(`image source set to ${fromImg}`)
+        if (el.src.includes(fromImg)) {
+            el.src = toImg
+        } else if (el.src.includes(toImg)) {
+            el.src = fromImg
         }
     }
 
@@ -78,7 +87,11 @@ class Toggler {
     //togglers the Property of the element with reference to the id of the element
     toggleProperty(elementIdOrClass, property, fromValue, toValue) {
         var el = document.getElementById(elementIdOrClass);
-        if (el.style.getPropertyValue(`${property}`) == `${fromValue}`) el.style.setProperty(`${property}`, `${toValue}`)
-        else el.style.setProperty(`${property}`, `${fromValue}`)
+        if (el.style.getPropertyValue(property) == null || el.style.getPropertyValue(property) == '') {
+            el.style.setProperty(property, toValue)
+            return
+        }
+        if (el.style.getPropertyValue(property) == fromValue) el.style.setProperty(property, toValue)
+        else el.style.setProperty(property, fromValue)
     }
 }

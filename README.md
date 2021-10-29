@@ -10,10 +10,14 @@ A package (atleast the code) to toggle properties of tags.
 ## through Toggler.js CDN
 
 Official CDN:
+
+For latest version
+
 ```html
 <script src="https://the-atelier.ml/external-scripts/Toggler.js"></script>
 ```
 jsDelivr:
+
 ```html
 <script src="https://cdn.jsdelivr.net/gh/Chandra-sekhar-pilla/Toggler/Toggler.js"></script>
 ```
@@ -52,7 +56,7 @@ for example:
 
 **Toggle Properties:**
 
-- Now toggle properties.
+- Now toggleClass() works for multiple classes.
 
 **Syntax:**
 
@@ -96,19 +100,20 @@ toggler.toggleSlide('testElement2', 'vertical', 60);//toggles the slide vertical
 
 **Note: To avoid problems use `left: 30px` or `top: 30px` instead of `margin-left: 30px` or `margin-top: 30px` because the code calculats the offset values.**
 
+# Improvements done
+
+- Improve toggleProperty() cause only changing when it is clicked second time at the beginning.
+
 # Planned improvements
 
-- Upgrade Toggler so users can use class names too for toggling.
 - Improve toggleSlide() for vertical toggles.
-- Improve toggleProperty() cause only changing when it is clicked second time at the beginning.
 
 **Note: You can request some features by opening a PR or issuing a feature request through issue.**
 
 # Optimizations:
 
-- Now Toggler is a class.
-- Removed `InteractionCount()` which sometimes doesn't work properly.
-- Added vertical slide support.
+- toggleClass() works even the element contains multiple classes.
+- Optimised code.
 
 # How to download
 
