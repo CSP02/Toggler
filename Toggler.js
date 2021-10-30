@@ -20,7 +20,7 @@ class Toggler {
 
     //toggleImage() is the method which will toggle the src image of the image tag
     toggleImage(elementId, fromImg, toImg) {
-        let element = document.getElementById(`${elementId}`)
+        let element = document.getElementById(elementId)
         if (element.src.includes(fromImg)) {
             element.src = toImg
         } else if (element.src.includes(toImg)) {
@@ -31,7 +31,7 @@ class Toggler {
 
     //ToggleSlide which will toggles the slide or an element in given direction
     toggleSlide(elementId, direction, speed) {
-        let element = document.getElementById(`${elementId}`)
+        let element = document.getElementById(elementId)
         let elWidth = element.offsetWidth
         let elHeight = element.offsetHeight
         let offsetLeft = element.offsetLeft
@@ -85,8 +85,8 @@ class Toggler {
     }
 
     //togglers the Property of the element with reference to the id of the element
-    toggleProperty(elementIdOrClass, property, fromValue, toValue) {
-        let element = document.getElementById(elementIdOrClass);
+    toggleProperty(elementId, property, fromValue, toValue) {
+        let element = document.getElementById(elementId);
         if (element.style.getPropertyValue(property) == null || element.style.getPropertyValue(property) == '') {
             element.style.setProperty(property, toValue)
             return

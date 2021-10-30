@@ -6,6 +6,12 @@ A package (atleast the code) to toggle properties of tags.
 
 > I mostly use toggle classes while making a switch theme method, button interaction etc.
 
+# File sizes:
+File | Size
+---- | ----
+Toggler.js | 3.90 KB (3,996 bytes)
+Toggler.min.js | 1.78 KB (1,824 bytes)
+
 # How to use 
 ## through Toggler.js CDN
 
