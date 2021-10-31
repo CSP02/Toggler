@@ -9,7 +9,7 @@ A package (atleast the code) to toggle properties of tags.
 # File sizes:
 File | Size
 ---- | ----
-Toggler.js | 3.90 KB (3,996 bytes)
+Toggler.js | 6.06 KB (6,209 bytes)
 Toggler.min.js | 1.78 KB (1,824 bytes)
 
 # How to use 
@@ -71,9 +71,15 @@ for example:
 
 # New feature
 
-**Toggle.min.js:**
+**Error handling:**
 
-- Added Toggler.min.js - A file which saves you some storage and provides all the features of Toggler.js  
+- Added error handling for toggleClass()
+
+# Example error that will pop up on the page:
+
+![ErrorDialog](https://github.com/Chandra-sekhar-pilla/Toggler/blob/main/resouces/errorDialog.png "ErrorDialog")
+
+**Note: You can click close to close the dialog or it will close automatically after 10 seconds.**
 
 **Syntax:**
 
