@@ -1,20 +1,25 @@
 class Toggler {
     //toggleClass() will toggle the provided class name and the current class name. Works for multiple classes too
     toggleClass(elementId, preClass, aftClass) {
-        let element = document.getElementById(elementId)
+        var element = document.getElementById(elementId)
         const isCCGO = element.className.split(" ").length > 1 //isCCGO stands for isClassCountGreaterThanOne
-        if (element.className.includes(preClass) && !isCCGO) {
-            element.className = aftClass;
-        }
-        else if (element.className.includes(preClass) && isCCGO) {
-            let replaced = element.className.replace(preClass, '')
-            element.className = replaced + aftClass;
-        } else if (element.className.includes(aftClass) && !isCCGO) {
-            element.className = preClass;
-        }
-        else if (element.className.includes(aftClass) && isCCGO) {
-            let replaced = element.className.replace(aftClass, '')
-            element.className = replaced + preClass;
+        if (!isCCGO) {
+            if (element.className == preClass) {
+                element.className = aftClass
+            } else if (element.className == aftClass) {
+                element.className = preClass
+            }
+        } else if (isCCGO) {
+            let replaced = element.className.split(' ')
+            replaced.forEach(value => {
+                if (value == preClass) {
+                    let replacedVal = element.className.replace(value, '')
+                    element.className = `${replacedVal}  ${aftClass}`
+                } else if (value == aftClass) {
+                    let replacedVal = element.className.replace(value, '')
+                    element.className = `${replacedVal}  ${preClass}`
+                }
+            })
         }
     }
 
