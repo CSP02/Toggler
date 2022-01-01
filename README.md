@@ -118,11 +118,9 @@ toggler.toggleSlide(elementID, fromDirection, speed);
 
 ```js
 const toggler = new Toggler;
-toggler.toggleSlide('testElement, horizontal, 60);//toggles the slide horizontally i.e from left to right or right to left
-toggler.toggleSlide('testElement2, vertical, 60);//toggles the slide vertical i.e from bottom to top or top to bottom
+toggler.toggleSlide('testElement', 'left', 60);//toggles the slide from left to right or right to left
+toggler.toggleSlide('testElement2', 'top', 60);//toggles the slide from bottom to top or top to bottom
 ```
-
-**Note: To avoid problems use `left: 30px` or `top: 30px` instead of `margin-left: 30px` or `margin-top: 30px` because the code calculats the offset values.**
 
 # Optimizations:
 
