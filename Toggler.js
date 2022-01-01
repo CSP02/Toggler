@@ -1,137 +1,163 @@
+let count = 1;
+
 class Toggler {
     //toggleClass() will toggle the provided class name and the current class name. Works for multiple classes too
     toggleClass(elementId, preClass, aftClass) {
         try {
             if (elementId == null) {
-                throw new SyntaxError('ElementID was not provided')
+                throw 'ElementID was not provided';
             } else if (preClass == null) {
-                throw new SyntaxError('(preClass is not provided) Previous class or current class is not provided.')
+                throw '(preClass is not provided) Previous class or current class is not provided.';
             } else if (aftClass == null) {
-                throw new SyntaxError('(aftClass is not provided) Provide a string of class name that toggler has to toggle between.')
+                throw '(aftClass is not provided) Provide a string of class name that toggler has to toggle between.';
             } else if (!isNaN(elementId) || !isNaN(preClass) || !isNaN(aftClass)) {
-                throw new TypeError('All the parameters are strings. Check if you passed the string parameters.')
+                throw 'All the parameters are strings. Check if you passed the string parameters.';
             }
-            let element = document.getElementById(elementId)
-            const isCCGO = element.className.split(" ").length > 1 //isCCGO stands for isClassCountGreaterThanOne
+            let element = document.getElementById(elementId);
+            const isCCGO = element.className.split(" ").length > 1; //isCCGO stands for isClassCountGreaterThanOne
             if (!isCCGO) {
                 if (element.className == preClass) {
-                    element.className = aftClass
+                    element.className = aftClass;
                 } else if (element.className == aftClass) {
-                    element.className = preClass
+                    element.className = preClass;
                 }
             } else if (isCCGO) {
-                let replaced = element.className.split(' ')
+                let replaced = element.className.split(' ');
                 replaced.forEach(value => {
                     if (value == preClass) {
-                        let replacedVal = element.className.replace(value, '')
-                        element.className = `${replacedVal}  ${aftClass}`
+                        let replacedVal = element.className.replace(value, '');
+                        element.className = `${replacedVal}  ${aftClass}`;
                     } else if (value == aftClass) {
-                        let replacedVal = element.className.replace(value, '')
-                        element.className = `${replacedVal}  ${preClass}`
+                        let replacedVal = element.className.replace(value, '');
+                        element.className = `${replacedVal}  ${preClass}`;
                     }
                 })
             }
         } catch (e) {
-            if (e instanceof TypeError && e.message.includes('null'))
-                e = 'Provided ID was not found check if there is a typo in the parameters passed.\n'
-            const dialog = document.createElement('dialog')
-            dialog.className = "CSP'sDialogClass"
-            dialog.id = "CSP'sDialogClass"
-            dialog.style = 'height:auto;width:300px;margin:-50% auto auto 30%;padding: 3%;font-size: 18px;text-align: center;text- ustify: initial;color: rgb(221, 221, 221);background-color: rgba(37, 37, 37, 0.6);backdrop-filter: blur(15px);border:none;border-radius:6px;float:right;'
-            this.errorHandling(dialog, e)
+            const dialog = document.createElement('dialog');;
+            dialog.className = "CSP'sDialogClass";;
+            dialog.id = "CSP'sDialogClass";;
+            dialog.style = 'height:auto;width:300px;margin:-50% auto auto 30%;padding: 3%;font-size: 18px;text-align: center;text- ustify: initial;color: rgb(221, 221, 221);background-color: rgba(37, 37, 37, 0.6);backdrop-filter: blur(15px);border:none;border-radius:6px;float:right;';
+            this.errorHandling(dialog, e);
             setTimeout(() => {
-                dialog.remove()
-            }, 10000)
+                dialog.remove();
+            }, 10000);
         }
     }
 
     //toggleImage() is the method which will toggle the src image of the image tag
     toggleImage(elementId, fromImg, toImg) {
-        let element = document.getElementById(elementId)
-        if (element.src.includes(fromImg)) {
-            element.src = toImg
-        } else if (element.src.includes(toImg)) {
-            element.src = fromImg
+        try {
+            if (elementId == null) {
+                throw 'ElementID was not provided';
+            } else if (fromImg == null) {
+                throw '(fromImg is not provided) The current src of this img tag is not provided.';
+            } else if (toImg == null) {
+                throw '(toImg is not provided) Provide the src of the image to which toggler has to toggle between.';
+            } else if (!isNaN(elementId) || !isNaN(fromImg) || !isNaN(toImg)) {
+                throw 'All the parameters are strings. Check if you passed the string parameters.';
+            }
+            let element = document.getElementById(elementId);
+            if (element.src.includes(fromImg)) {
+                element.src = toImg;
+            } else if (element.src.includes(toImg)) {
+                element.src = fromImg;
+            }
+        } catch (e) {
+            const dialog = document.createElement('dialog');
+            dialog.className = "CSP'sDialogClass";
+            dialog.id = "CSP'sDialogClass";
+            dialog.style = 'border-radius:6px;height:auto;width:300px;margin:-50% auto auto 30%;padding: 3%;font-size: 18px;text-align: center;text- ustify: initial;color: rgb(221, 221, 221);background-color: rgba(37, 37, 37, 0.6);backdrop-filter: blur(15px);border:none;border-radius:6px;float:right;';
+            this.errorHandling(dialog, e);
+            setTimeout(() => {
+                dialog.remove();
+            }, 10000);
         }
     }
 
 
-    //ToggleSlide which will toggles the slide or an element in given direction
-    toggleSlide(elementId, direction, speed) {
-        let element = document.getElementById(elementId)
-        let elWidth = element.offsetWidth
-        let elHeight = element.offsetHeight
-        let offsetLeft = element.offsetLeft
-        let addPos = offsetLeft
-        let offsetTop = element.offsetTop
-        let addPosTop = offsetTop
-        if (direction == 'horizontal') {
-            if (offsetLeft > -elWidth)
-                toggle = setInterval(fadeHorizontal, speed)
-            else if (offsetLeft <= -elWidth)
-                toggle = setInterval(fadeOutHorizontal, speed)
-        } else if (direction == 'vertical') {
-            if (offsetTop > -elHeight)
-                toggle = setInterval(fadeVertical, speed)
-            else if (offsetTop <= -elHeight)
-                toggle = setInterval(fadeOutVertical, speed)
-        }
-        function fadeHorizontal() {
-            if (offsetLeft <= -elWidth)
-                clearInterval(toggle)
-            else {
-                console.log(offsetLeft)
-                offsetLeft -= 10;
-                element.style.left = offsetLeft + 'px';
+    //ToggleSlide which will toggles the sliding machanism of an element from given direction
+    toggleSlide(elementId, fromDirection, speed) {
+        try {
+            if (elementId == null) {
+                throw 'ElementID was not provided';
+            } else if (fromDirection == null) {
+                throw '(fromDirection is not provided) Provide the direction of the slide from which side the slide should start.';
+            } else if (speed == null) {
+                throw '(speed or time is not provided) Provide a time in seconds and it can be a number(float or an integer) or a string.';
+            } else if (!isNaN(elementId) || !isNaN(fromDirection)) {
+                throw 'All the parameters are strings. Check if you passed the string parameters.';
             }
-        }
-        function fadeOutHorizontal() {
-            if (offsetLeft >= elWidth + addPos)
-                clearInterval(toggle)
-            else {
-                offsetLeft += 10;
-                element.style.left = offsetLeft + 'px';
+            let element = document.getElementById(elementId);
+            let elementHeight = element.offsetHeight;
+            let elementWidth = element.offsetWidth;
+            element.style.transition = `${speed}s ease-in-out`;
+            if (fromDirection == 'right' || fromDirection == 'left') {
+                if (fromDirection == 'right') {
+                    element.style.float = 'right';
+                }
+                element.style.setProperty(`margin-${fromDirection}`, `-${elementWidth}px`);
             }
-        }
-        function fadeVertical() {
-            if (offsetTop <= -elHeight)
-                clearInterval(toggle)
-            else {
-                offsetTop -= 10;
-                element.style.top = offsetTop + 'px';
+            else if (fromDirection == 'top') {
+                element.style.setProperty(`margin-${fromDirection}`, `-${elementHeight}px`);
             }
-        }
-        function fadeOutVertical() {
-            if (offsetTop >= elHeight + addPosTop)
-                clearInterval(toggle)
-            else {
-                offsetTop += 10;
-                element.style.top = offsetTop + 'px';
+            count++;
+            if (count % 2 != 0) {
+                element.style.setProperty(`margin-${fromDirection}`, `0px`);
             }
+        } catch (e) {
+            const dialog = document.createElement('dialog');
+            dialog.className = "CSP'sDialogClass";
+            dialog.id = "CSP'sDialogClass";
+            dialog.style = 'height:auto;width:300px;margin:-50% auto auto 30%;padding: 3%;font-size: 18px;text-align: center;text- ustify: initial;color: rgb(221, 221, 221);background-color: rgba(37, 37, 37, 0.6);backdrop-filter: blur(15px);border:none;border-radius:6px;float:right;';
+            this.errorHandling(dialog, e);
+            setTimeout(() => {
+                dialog.remove();
+            }, 10000);
         }
     }
 
     //togglers the Property of the element with reference to the id of the element
     toggleProperty(elementId, property, fromValue, toValue) {
-        let element = document.getElementById(elementId);
-        if (element.style.getPropertyValue(property) == null || element.style.getPropertyValue(property) == '') {
-            element.style.setProperty(property, toValue)
-            return
+        try {
+            if (elementId == null) {
+                throw 'ElementID was not provided';
+            } else if (property == null) {
+                throw '(property is not provided) Previous which style property toggler has to change or toggle.';
+            } else if (fromValue == null) {
+                throw '(fromValue is not provided) Provide the current value of property that toggler has to toggle between.';
+            } else if (toValue == null) {
+                throw '(toValue is not provided) Provide the value of property to which toggler has to toggle between.';
+            } else if (!isNaN(elementId) || !isNaN(preClass) || !isNaN(aftClass)) {
+                throw 'All the parameters are strings. Check if you passed the string parameters.';
+            }
+            let element = document.getElementById(elementId);
+            if (element.style.getPropertyValue(property) == null || element.style.getPropertyValue(property) == '') {
+                element.style.setProperty(property, toValue);
+                return;
+            }
+            if (element.style.getPropertyValue(property) == fromValue) element.style.setProperty(property, toValue);
+            else element.style.setProperty(property, fromValue);
+        } catch (e) {
+            const dialog = document.createElement('dialog');
+            dialog.className = "CSP'sDialogClass";
+            dialog.id = "CSP'sDialogClass";
+            dialog.style = 'height:auto;width:300px;margin:-50% auto auto 30%;padding: 3%;font-size: 18px;text-align: center;text- ustify: initial;color: rgb(221, 221, 221);background-color: rgba(37, 37, 37, 0.6);backdrop-filter: blur(15px);border:none;border-radius:6px;float:right;';
+            this.errorHandling(dialog, e);
+            setTimeout(() => {
+                dialog.remove();
+            }, 10000);
         }
-        if (element.style.getPropertyValue(property) == fromValue) element.style.setProperty(property, toValue)
-        else element.style.setProperty(property, fromValue)
     }
 
     errorHandling = function (dialog, e) {
-        document.body.appendChild(dialog)
-        let splitted = e.stack.split('\n')
-        splitted = splitted[2].split('at')
-        dialog.innerHTML += `${e.message}<br><span style="color:red;">at ${splitted[1]}</span><br><button id="CSP'scloseDialog" onclick="TogglerCloseDialog()">Close</button>`
-        dialog.open = true
+        document.body.appendChild(dialog);
+        dialog.innerHTML += `${e}<br><span style="color:red;"></span><br><button style="border-radius:6px;border:none;" onclick="TogglerCloseDialog()">Close</button>`
+        dialog.open = true;
     }
 }
 
 function TogglerCloseDialog() {
-    let dialogs = document.getElementById("CSP'sDialogClass")
-    dialogs.remove()
+    let dialogs = document.getElementById("CSP'sDialogClass");
+    dialogs.remove();
 }

@@ -7,10 +7,10 @@ A package (atleast the code) to toggle properties of tags.
 > I mostly use toggle classes while making a switch theme method, button interaction etc.
 
 # File sizes:
-File | Size
----- | ----
-Toggler.js | 6.06 KB (6,209 bytes)
-Toggler.min.js | 1.78 KB (1,824 bytes)
+File | Size | Size on disk
+---- | ---- | ------------
+Toggler.js | 8.66 KB (8,871 bytes) | 12.0 KB (12,288 bytes)
+Toggler.min.js | 5.83 KB (5,980 bytes) | 8.00 KB (8,192 bytes)
 
 # How to use 
 ## through Toggler.js CDN
@@ -45,10 +45,10 @@ In you JavaScript file:
 
 ```js
  const toggler = new Toggler;
- toggler.toggleClass('elementID', 'fromClass', 'toClass');
- toggler.toggleImage('elementID', 'fromImage', 'toImage');
- toggler.toggleSlide('elementID', 'direction', speed);
- toggler.toggleProperty('elementID', 'propertyName', 'fromValue', 'toValue');
+ toggler.toggleClass(elementID, fromClass, toClass);
+ toggler.toggleImage(elementID, fromImage, toImage);
+ toggler.toggleSlide(elementID, fromDirection, speed);
+ toggler.toggleProperty(elementID, propertyName, fromValue, toValue);
 ```
 
 ## Manually downloading the file
@@ -67,13 +67,14 @@ for example:
 <script src="Toggler.js"></script>
 <script src="myscript.js"></script>
 ```
-- After this you can use `toggler.toggleClass(elementId, fromClass, toClass)` method to toggle between classes `toggler.toggleImage(elementID, fromImage, toImage)` to toggle between images in your main script.
+- After this you can use `toggler.toggleClass(elementId, fromClass, toClass)` method to toggle between classes `toggler.toggleImage(elementID, fromImage, toImage)` to toggle between images etc. in your main script.
 
 # New feature
 
 **Error handling:**
 
-- Added error handling for toggleClass()
+- Added error handling for Toggler.
+- Changed whole implementation of toggleSlide().
 
 # Example error that will pop up on the page:
 
@@ -85,7 +86,7 @@ for example:
 
 ```js 
 const toggler = new Toggler;
-toggler.toggleProperty('elementID', 'propertyName', 'fromValue', 'toValue');
+toggler.toggleProperty(elementID, propertyName, fromValue, toValue);
 ```
 
 - Create a new object using `const toggler = new Toggler`.
@@ -101,12 +102,12 @@ toggler.toggleProperty('elementID', 'propertyName', 'fromValue', 'toValue');
 
 ```js 
 const toggler = new Toggler;
-toggler.toggleSlide('elementID', 'direction', speed);
+toggler.toggleSlide(elementID, fromDirection, speed);
 ```
 
-**Direction**:
+**fromDirection**:
 
-- Direction says about in what direction the slide to start either horizontal slide or vertical slide.
+- fromDirection says about from what direction the slide to start. Check the docs for more info.
 (visit docs for more info link is below.)
 
 **Speed:**
@@ -117,21 +118,17 @@ toggler.toggleSlide('elementID', 'direction', speed);
 
 ```js
 const toggler = new Toggler;
-toggler.toggleSlide('testElement', 'horizontal', 60);//toggles the slide horizontally i.e from left to right or right to left
-toggler.toggleSlide('testElement2', 'vertical', 60);//toggles the slide vertical i.e from bottom to top or top to bottom
+toggler.toggleSlide('testElement, horizontal, 60);//toggles the slide horizontally i.e from left to right or right to left
+toggler.toggleSlide('testElement2, vertical, 60);//toggles the slide vertical i.e from bottom to top or top to bottom
 ```
 
 **Note: To avoid problems use `left: 30px` or `top: 30px` instead of `margin-left: 30px` or `margin-top: 30px` because the code calculats the offset values.**
 
-# Improvements done
-
-- Improve toggleProperty() cause only changing when it is clicked second time at the beginning.
-- Added Toggler.min.js - minimised version of Toggler.js
-
 # Optimizations:
 
-- toggleClass() works even the element contains multiple classes.
+- toggleSlide() implementation is completely different.
 - Optimised code.
+- Error handling
 
 
 # Planned improvements
@@ -170,10 +167,10 @@ $ git clone https://github.com/Chandra-sekhar-pilla/Toggler.git
 # Syntax
 ```js
  const toggler = new Toggler;
- toggler.toggleClass('elementID', 'fromClass', 'toClass');
- toggler.toggleImage('elementID', 'fromImage', 'toImage');
- toggler.toggleSlide('elementID', 'direction', speed);
- toggler.toggleProperty('elementID', 'propertyName', 'fromValue', 'toValue');
+ toggler.toggleClass(elementID, fromClass, toClass);
+ toggler.toggleImage(elementID, fromImage, toImage);
+ toggler.toggleSlide(elementID, fromDirection, speed);
+ toggler.toggleProperty(elementID, propertyName, fromValue, toValue);
 ```
 
 **elementID:**
@@ -197,9 +194,9 @@ New class name to the given element.
 
 - Speed defines the speed of the toggling that mean how fast it to slide.
 
-- Note that speed is int literal.
+- Note that speed can be any literal i.e an int or a float  or a string.
 
-**Note: Remember all the arguments are strings except speed. And Toggler.js will work in reference with Id of the element so make sure you given a valid id for elements before using the methods.**
+**Note: Remember all the arguments are strings except speed which acceps all three literals(int, float, string). And Toggler.js will work in reference with Id of the element so make sure you given a valid id for elements before using the methods.**
 
 Remember to use this syntax in your main script not in Toggler.js
 
