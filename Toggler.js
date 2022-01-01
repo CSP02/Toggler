@@ -1,4 +1,4 @@
-let count = 1;
+let count = 0;
 
 class Toggler {
     //toggleClass() will toggle the provided class name and the current class name. Works for multiple classes too
