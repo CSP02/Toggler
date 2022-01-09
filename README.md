@@ -41,7 +41,7 @@ For Toggler.min.js
 
 You can use this in either body tag or in head tag
 
-In you JavaScript file:
+In your JavaScript file:
 
 ```js
  const toggler = new Toggler;
