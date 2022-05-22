@@ -1,6 +1,6 @@
 # Toggler
 
-![Toggler](https://github.com/Chandra-sekhar-pilla/Toggler/blob/main/resouces/toggler%20(small).png "Toggler")
+![Toggler](https://github.com/Chandra-sekhar-pilla/Toggler/blob/main/resouces/togglerLogo(withToggler).png "Toggler")
 
 A package (atleast the code) to toggle properties of tags.
 
