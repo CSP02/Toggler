@@ -128,7 +128,7 @@ class Toggler {
                 throw '(fromValue is not provided) Provide the current value of property that toggler has to toggle between.';
             } else if (toValue == null) {
                 throw '(toValue is not provided) Provide the value of property to which toggler has to toggle between.';
-            } else if (!isNaN(elementId) || !isNaN(preClass) || !isNaN(aftClass)) {
+            } else if (!isNaN(elementId) || !isNaN(property) || !isNaN(fromValue) || !isNaN(toValue)) {
                 throw 'All the parameters are strings. Check if you passed the string parameters.';
             }
             let element = document.getElementById(elementId);
