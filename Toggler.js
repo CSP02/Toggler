@@ -96,14 +96,14 @@ class Toggler {
                 if (fromDirection == 'right') {
                     element.style.float = 'right';
                 }
-                element.style.setProperty(`margin-${fromDirection}`, `-${elementWidth}px`);
+                element.style.setProperty(`margin-${fromDirection}`, `-${elementWidth + 100}`);
             }
             else if (fromDirection == 'top') {
-                element.style.setProperty(`margin-${fromDirection}`, `-${elementHeight}px`);
+                element.style.setProperty(`margin-${fromDirection}`, `-${elementHeight + 100}`);
             }
             count++;
             if (count % 2 != 0) {
-                element.style.setProperty(`margin-${fromDirection}`, `0px`);
+                    element.style.setProperty(`margin-${fromDirection}`, `0`);
             }
         } catch (e) {
             const dialog = document.createElement('dialog');
@@ -154,6 +154,10 @@ class Toggler {
         document.body.appendChild(dialog);
         dialog.innerHTML += `${e}<br><span style="color:red;"></span><br><button style="border-radius:6px;border:none;" onclick="TogglerCloseDialog()">Close</button>`
         dialog.open = true;
+    }
+
+    Inc() {
+        count++;
     }
 }
 

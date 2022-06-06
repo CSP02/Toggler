@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="index.js"></script>
-    <script src="Toggler.min.js"></script>
+    <script src="Toggler.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -15,8 +15,8 @@
         #slide{
             background-color: black;
             width: 100px;
-            height: 500px;
-            margin-top:-50px;
+            height: 100vh;
+            margin-top:-200vh;
         }
         button{
             height: 50px;
@@ -24,7 +24,7 @@
             position: relative;
         }
     </style>
-    <button onclick="slode()">click</button>
+    <button onclick="slode()" id="test">click</button>
     <div id="slide"></div>
 </body>
 </html>
