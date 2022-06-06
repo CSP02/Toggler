@@ -96,14 +96,14 @@ class Toggler {
                 if (fromDirection == 'right') {
                     element.style.float = 'right';
                 }
-                element.style.setProperty(`margin-${fromDirection}`, `-${elementWidth + 100}`);
+                element.style.setProperty(`margin-${fromDirection}`, `-${elementWidth + 100}px`);
             }
             else if (fromDirection == 'top') {
-                element.style.setProperty(`margin-${fromDirection}`, `-${elementHeight + 100}`);
+                element.style.setProperty(`margin-${fromDirection}`, `-${elementHeight + 100}px`);
             }
             count++;
             if (count % 2 != 0) {
-                    element.style.setProperty(`margin-${fromDirection}`, `0`);
+                    element.style.setProperty(`margin-${fromDirection}`, `0px`);
             }
         } catch (e) {
             const dialog = document.createElement('dialog');
