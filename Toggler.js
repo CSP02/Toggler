@@ -103,8 +103,9 @@ class Toggler {
             }
             count++;
             if (count % 2 != 0) {
-                    element.style.setProperty(`margin-${fromDirection}`, `0px`);
+                element.style.setProperty(`margin-${fromDirection}`, `0px`);
             }
+            element.style.setProperty(`${fromDirection}`, `0px`);
         } catch (e) {
             const dialog = document.createElement('dialog');
             dialog.className = "CSP'sDialogClass";
